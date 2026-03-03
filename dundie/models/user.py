@@ -1,5 +1,7 @@
 """User related data models"""
+
 from typing import Optional
+
 from sqlmodel import Field, SQLModel
 
 
@@ -18,5 +20,5 @@ class User(SQLModel, table=True):
 
     @property
     def superuser(self):
-        """"Users belonging to management dept are admins."""
+        """ "Users belonging to management dept are admins."""
         return self.dept == "management"
